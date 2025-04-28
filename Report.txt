@@ -1,44 +1,58 @@
-Name:
+Name: Luke Knofczynski
 
-Number of elements:
+Number of elements: 15000
 
 Bubble Sort
-Sorted:
-Reversed:
-Random:
+Sorted: 5.58
+Reversed: 13.30269
+Random: 10.85
 
 Bubble Sort Early Exit
-Sorted:
-Reversed:
-Random:
+Sorted: .00079
+Reversed: 13.25
+Random: 10.79
 
 Selection Sort
-Sorted:
-Reversed:
-Random:
+Sorted: 4.31
+Reversed: 4.47
+Random: 4.71
 
 Insertion Sort
-Sorted:
-Reversed:
-Random:
+Sorted: .00156
+Reversed: 9.35
+Random: 5.32
 
 Merge Sort
-Sorted:
-Reversed:
-Random:
+Sorted: .0437
+Reversed: .0482
+Random: .0642
 
 Questions to answer:
 1) What was the worst case scenario for any sorting technique?
-
+    
+    For both bubble sorts and the insertion sort, the worst case scenario was having the list in reverse order, for the
+    others, it was when the data was random.
 
 2) The first 3 sorts have the same runtime of O(n^2). Why were the times different? Why would one be more efficient than the others?
 
+    Since bubble sort goes through and only moves an item 1 position, there are way more actions needed to complete the sort.
+    Bubble sort early exit is similar, but it has an early out if it detects no sorts. Selection sort takes the biggest number,
+    and moves it to the end of the list, so fewer actions are needed, and fewer seconds are spent. This makes selection sort
+    the most efficient of the three. 
 
 3) Why was merge sort so much more efficient?
+
+    Merge sort is spliting the list up until they are all individual items, and then puts them all back together in order
 
 
 4) The built-in sorting technique for most programming languages is known as TimSort.
 This is a merge sort until the arrays have fewer than 10 elements, then it does an insertion sort. Why would this be useful?
 
+This would be useful because it would require less actions. by only taking it down to 10, it would eliminate a significant
+portion of splits, depending on the size of the list. Insertion would then take care of the rest, as it would be quite efficient
+with only 10 items. 
 
 5) What issues can you see with a recursive sorting technique like merge sort?
+
+    The larger the list that you are sorting, the more splits you have to make. This can add up quickly and cause many actions
+    to take place. By using a Tim sort technique, you eliminate plenty of splits that would take up memory. 
